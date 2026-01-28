@@ -1,0 +1,8 @@
+from langchain.embeddings import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
+
+# Criar embeddings
+embeddings = OpenAIEmbeddings()
+
+# Supondo que 'documentos' seja uma lista de textos dos PDFs
+vetor_index = FAISS.from_texts(documentos, embeddings)
